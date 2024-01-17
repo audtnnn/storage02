@@ -112,18 +112,77 @@ body {
     border: 1px solid #000;
     background-color: rgba(0, 0, 0, 0.05);
 }
-#section .slide01 {
+#section .slide_outer .slide_inner .slide {
     position: relative;
-    /* background-image: url(../images/mainslide3.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    background-repeat: no-repeat; */
-    background: url(../images/mainslide3.jpg) no-repeat center / cover;
     height: 600px;
 }
+#section .slide_outer .slide_inner .slide1 {
+    background: url(../images/mainslide1.jpg) center / cover;
+}
+#section .slide_outer .slide_inner .slide2 {
+    background: url(../images/mainslide2.jpg) center / cover;
+}
+#section .slide_outer .slide_inner .slide3 {
+    background: url(../images/mainslide3.jpg) center / cover;
+}
 
-#section .slide01 .text {
+#section .slide_outer .slide_inner {
+    position: relative;
+  }
+  #section .slide_outer .slide_inner button.slick-arrow {
+    border: none;
+    background: none;
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+  }
+  #section .slide_outer .slide_inner button.slick-next {
+    right: 50px;
+  }
+  #section .slide_outer .slide_inner button.slick-prev {
+    left: 50px;
+    z-index: 999;
+  }
+  #section .slide_outer .slide_inner ul.slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 50px;
+  }
+  #section .slide_outer .slide_inner ul.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  #section .slide_outer .slide_inner ul.slick-dots li button {
+    width: 16px;
+    height: 16px;
+    text-indent: 9999px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    border: 5px solid transparent;
+    border-radius: 50%;
+  }
+  #section .slide_outer .slide_inner ul.slick-dots li.slick-active button {
+    background: #fff;
+    border: 5px solid #000;
+  }
+  
+  /* 슬라이더 자동재생멈춤 버튼 */
+  #section .slide_outer {
+    position: relative;
+  }
+  #section .slide_outer .plapau {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    font-size: 20px;
+    color: #000;
+    margin-left: 50px;
+  }
+
+#section  .slide_outer .slide_inner .slide .text {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -132,24 +191,39 @@ body {
     text-align: center;
 }
 
-#section .text p {
+#section  .slide_outer .slide_inner .slide .text p {
     font-size: 20px;
     font-family: "Noto Sans KR";
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active .slide .text p {
+    animation: fadeInUp 1s 1 both 0.3s;
 }
 
-#section .text h2 {
+#section  .slide_outer .slide_inner .slide .text h2 {
     font-size: 58px;
     margin: 8px 0px 60px;
     text-shadow: 1px 1px black;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active .slide .text h2 {
+    animation: fadeInUp 1s 1 both 0.5s;
 }
 
-
-#section .text a {
+#section  .slide_outer .slide_inner .slide .text a {
     font-family: "Noto Sans KR";
     font-size: 18px;
     border: 2.5px solid white;
     padding: 10px 16px;
     border-radius: 3px;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    display: inline-block;
+}
+#section .slick-current.slick-active .slide .text a {
+    animation: fadeInUp 1s 1 both 1s;
 }
 
 #section .Our_company {
